@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,11 +28,10 @@
             display: none;
         }
 
-        /* Contenedor de la foto de perfil */
+        /* Contenedor de foto optimizado */
         .profile-container {
-            position: relative;
-            width: 13rem; /* Tamaño optimizado (w-52) */
-            height: 13rem;
+            width: 12rem;
+            height: 12rem;
             border-radius: 9999px;
             border: 4px solid #f97316;
             overflow: hidden;
@@ -43,11 +42,8 @@
         .profile-img {
             width: 100%;
             height: 100%;
-            /* 'cover' asegura que llene el círculo sin deformar */
             object-fit: cover;
-            /* Ajustamos la posición para que NO corte la cabeza */
-            /* El primer valor es horizontal (center), el segundo vertical (20% para bajar la imagen) */
-            object-position: center 20%;
+            object-position: center;
         }
 
         @media print {
@@ -60,19 +56,18 @@
 </head>
 <body class="p-0 md:p-8">
 
-    <!-- Barra de Herramientas -->
     <div class="max-w-5xl mx-auto mb-4 flex flex-wrap justify-between items-center px-4 no-print gap-4">
-        <div class="flex bg-white rounded-lg shadow p-1">
-            <button onclick="setLanguage('ca')" id="btn-ca" class="px-3 py-1 rounded-md text-[10px] font-bold transition-all bg-orange-600 text-white">CAT</button>
-            <button onclick="setLanguage('es')" id="btn-es" class="px-3 py-1 rounded-md text-[10px] font-bold transition-all text-slate-500 hover:bg-slate-100">ESP</button>
+        <div class="flex bg-white rounded-lg shadow p-1 border border-slate-200">
+            <button onclick="setLanguage('ca')" id="btn-ca" class="px-3 py-1 rounded-md text-[10px] font-bold transition-all text-slate-500 hover:bg-slate-100">CAT</button>
+            <button onclick="setLanguage('es')" id="btn-es" class="px-3 py-1 rounded-md text-[10px] font-bold transition-all bg-orange-600 text-white">ESP</button>
             <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 rounded-md text-[10px] font-bold transition-all text-slate-500 hover:bg-slate-100">ENG</button>
         </div>
         
         <div class="flex gap-3">
             <button onclick="window.print()" class="flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-500 transition-all shadow-md">
                 <i class="fa-solid fa-print"></i> 
-                <span class="lang-ca">Imprimir PDF</span>
-                <span class="lang-es lang-hidden">Imprimir PDF</span>
+                <span class="lang-ca lang-hidden">Imprimir PDF</span>
+                <span class="lang-es">Imprimir PDF</span>
                 <span class="lang-en lang-hidden">Print PDF</span>
             </button>
         </div>
@@ -80,10 +75,8 @@
 
     <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
         
-        <!-- SIDEBAR -->
         <aside class="w-full md:w-1/3 sidebar p-8 border-b md:border-b-0 md:border-r border-gray-200">
             <div class="flex flex-col items-center mb-8">
-                <!-- Foto de perfil con ajuste de posición vertical -->
                 <div class="profile-container mb-4">
                     <img src="albertcv.jpg" alt="Albert Alvarez Garcia" class="profile-img" onerror="this.src='https://via.placeholder.com/400?text=Albert+Alvarez'">
                 </div>
@@ -93,15 +86,15 @@
 
             <div class="space-y-8">
                 <section>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 border-b pb-1">Contact</h3>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 border-b pb-1">Contacto</h3>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-center group">
                             <i class="fa-brands fa-github w-8 text-slate-400 text-xl group-hover:text-orange-600 transition-colors"></i>
-                            <a href="https://github.com/Albert-Alvarez-Garcia" target="_blank" class="text-slate-600 hover:text-orange-600 transition-colors truncate">Albert-Alvarez-Garcia</a>
+                            <a href="https://github.com/Albert-Alvarez-Garcia" target="_blank" class="text-slate-600 hover:text-orange-600 transition-colors truncate font-medium">Albert-Alvarez-Garcia</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fa-solid fa-location-dot w-8 text-slate-400 text-lg"></i>
-                            <span class="text-slate-600">Barcelona, Spain</span>
+                            <span class="text-slate-600 font-medium">Barcelona, Spain</span>
                         </li>
                     </ul>
                 </section>
@@ -120,11 +113,20 @@
                 </section>
 
                 <section>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 border-b pb-1">Learning</h3>
-                    <div class="bg-orange-50 p-3 rounded-lg border border-orange-100">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 border-b pb-1">Metodologías</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-500 text-xs"></i> SCRUM Master</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-500 text-xs"></i> Agile Management</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-500 text-xs"></i> Team Leadership</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 border-b pb-1">Aprendizaje</h3>
+                    <div class="bg-orange-50 p-3 rounded-lg border border-orange-100 shadow-sm">
                         <p class="text-[10px] font-bold text-orange-800 uppercase mb-1">
-                            <span class="lang-ca">Pròxim Objectiu:</span>
-                            <span class="lang-es lang-hidden">Próximo Objetivo:</span>
+                            <span class="lang-ca lang-hidden">Pròxim Objectiu:</span>
+                            <span class="lang-es">Próximo Objetivo:</span>
                             <span class="lang-en lang-hidden">Next Goal:</span>
                         </p>
                         <span class="text-orange-700 font-bold text-xs uppercase tracking-widest italic">JULIA (HPC)</span>
@@ -133,50 +135,101 @@
             </div>
         </aside>
 
-        <!-- MAIN CONTENT -->
         <main class="w-full md:w-2/3 p-8 md:p-12">
             
-            <!-- Resumen Profesional -->
             <section class="mb-12">
                 <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest mb-6 flex items-center">
-                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm">01</span>
-                    <span class="lang-ca">Perfil Professional</span>
-                    <span class="lang-es lang-hidden">Perfil Profesional</span>
+                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm font-bold">01</span>
+                    <span class="lang-ca lang-hidden">Perfil Professional</span>
+                    <span class="lang-es">Perfil Profesional</span>
                     <span class="lang-en lang-hidden">Professional Profile</span>
                 </h2>
                 <div class="accent-border pl-6">
-                    <p class="text-slate-600 leading-relaxed italic text-lg lang-ca">
-                        Enginyer de programari amb una sòlida base en <strong>Estadística i Matemàtiques</strong>. Més de 20 anys transformant necessitats de negoci en solucions tecnològiques robustes. Perfil format a <strong>42 Barcelona</strong>, expert en el cicle de vida de la dada.
+                    <p class="text-slate-600 leading-relaxed italic text-lg lang-ca lang-hidden">
+                        Enginyer de programari amb una sòlida base en <strong>Estadística i Matemàtiques</strong>. Més de 20 anys transformant necessitats de negoci en solucions tecnològiques robustes. Perfil format a <strong>42 Barcelona</strong>, expert en el cicle de vida de la dada i arquitecte de solucions.
                     </p>
-                    <p class="text-slate-600 leading-relaxed italic text-lg lang-es lang-hidden">
-                        Ingeniero de software con una sólida base en <strong>Estadística y Matemáticas</strong>. Más de 20 años transformando necesidades de negocio en soluciones tecnológicas robustas. Perfil formado en <strong>42 Barcelona</strong>, experto en el ciclo de vida del dato.
+                    <p class="text-slate-600 leading-relaxed italic text-lg lang-es">
+                        Ingeniero de software con una sólida base en <strong>Estadística y Matemáticas</strong>. Más de 20 años transformando necesidades de negocio en soluciones tecnológicas robustas. Perfil formado en <strong>42 Barcelona</strong>, experto en el ciclo de vida del dato y arquitecte de soluciones.
                     </p>
                     <p class="text-slate-600 leading-relaxed italic text-lg lang-en lang-hidden">
-                        Software Engineer with a strong background in <strong>Statistics and Mathematics</strong>. Over 20 years transforming business needs into robust technical solutions. Trained at <strong>42 Barcelona</strong>, expert in data lifecycle.
+                        Software Engineer with a strong background in <strong>Statistics and Mathematics</strong>. Over 20 years transforming business needs into robust technical solutions. Trained at <strong>42 Barcelona</strong>, expert in data lifecycle and solutions architecture.
                     </p>
                 </div>
             </section>
 
-            <!-- Experiencia -->
             <section class="mb-12">
                 <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest mb-8 flex items-center">
-                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm">02</span>
-                    <span class="lang-ca">Experiència</span>
-                    <span class="lang-es lang-hidden">Experiencia</span>
+                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm font-bold">02</span>
+                    <span class="lang-ca lang-hidden">Experiència</span>
+                    <span class="lang-es">Experiencia</span>
                     <span class="lang-en lang-hidden">Experience</span>
                 </h2>
 
                 <div class="space-y-10">
                     <div class="relative pl-8 border-l border-slate-200">
-                        <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[8.5px] top-1 ring-4 ring-white"></div>
+                        <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[8.5px] top-1 ring-4 ring-white shadow-sm"></div>
                         <div class="flex justify-between items-start flex-wrap mb-2">
                             <h3 class="text-lg font-bold text-slate-800">Software Maintenance & Scrum Master</h3>
                             <span class="text-xs font-bold text-white bg-slate-800 px-2 py-1 rounded">VISUAL MS</span>
                         </div>
-                        <ul class="space-y-2 text-slate-600 text-sm lang-ca">
-                            <li><strong>Lideratge:</strong> Implementació de Scrum en un equip sènior.</li>
-                            <li><strong>Infraestructura:</strong> Gestió de servidors en <strong>AWS</strong>.</li>
+                        
+                        <ul class="space-y-2 text-slate-600 text-sm lang-es">
+                            <li><strong>Liderazgo de Equipos:</strong> Implementación de Scrum en un equipo sénior (+20 años).</li>
+                            <li><strong>Infraestructura:</strong> Gestión de servidores en <strong>AWS</strong>.</li>
+                            <li><strong>Innovación:</strong> Integración de IA y automatización de procesos.</li>
+                            <li><strong>Gestión de Crisis:</strong> Resolución urgente de protocolos TLS 1.2 AEAT.</li>
                         </ul>
+                        
+                        <ul class="space-y-2 text-slate-600 text-sm lang-ca lang-hidden">
+                            <li><strong>Lideratge d'Equips:</strong> Implementació de Scrum en un equip sènior (+20 anys).</li>
+                            <li><strong>Infraestructura:</strong> Gestió de servidors en <strong>AWS</strong>.</li>
+                            <li><strong>Innovació:</strong> Integració d'IA i automatització de processos.</li>
+                        </ul>
+
+                        <ul class="space-y-2 text-slate-600 text-sm lang-en lang-hidden">
+                            <li><strong>Team Leadership:</strong> Scrum implementation for senior development teams.</li>
+                            <li><strong>Infrastructure:</strong> <strong>AWS</strong> cloud management and maintenance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 border-l border-slate-200">
+                        <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[8.5px] top-1 ring-4 ring-white"></div>
+                        <div class="flex justify-between items-start flex-wrap mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Founder & Lead Developer</h3>
+                            <span class="text-xs font-bold text-slate-400 border border-slate-300 px-2 py-1 rounded tracking-widest uppercase">
+                                <span class="lang-ca lang-hidden">10 Anys</span>
+                                <span class="lang-es">10 Años</span>
+                                <span class="lang-en lang-hidden">10 Years</span>
+                            </span>
+                        </div>
+                        <div class="text-slate-600 text-sm italic">
+                            <span class="lang-es">Desarrollo integral de software TPV (PHP) con sincronización fiscal AEAT.</span>
+                            <span class="lang-ca lang-hidden">Desenvolupament integral de programari TPV (PHP) amb sincronització fiscal AEAT.</span>
+                            <span class="lang-en lang-hidden">Full-stack POS software development (PHP) with fiscal sync.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest mb-6 flex items-center">
+                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm font-bold">03</span>
+                    <span class="lang-ca lang-hidden">Formació</span>
+                    <span class="lang-es">Formación</span>
+                    <span class="lang-en lang-hidden">Education</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl hover:bg-white hover:shadow-md transition-all border border-slate-100">
+                        <h4 class="font-bold text-slate-800">42 Barcelona</h4>
+                        <p class="text-xs text-orange-600 font-bold uppercase mt-1">Software Engineering</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl hover:bg-white hover:shadow-md transition-all border border-slate-100">
+                        <h4 class="font-bold text-slate-800">Estadística & Matemáticas</h4>
+                        <p class="text-xs text-slate-500 font-bold uppercase mt-1">
+                            <span class="lang-es">Grado + 3 años Matemáticas</span>
+                            <span class="lang-ca lang-hidden">Grau + 3 anys Matemàtiques</span>
+                            <span class="lang-en lang-hidden">Degree + 3 years Mathematics</span>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -209,6 +262,11 @@
             });
             document.documentElement.lang = lang;
         }
+
+        // Carga inicial en castellano
+        window.onload = function() {
+            setLanguage('es');
+        };
     </script>
 </body>
 </html>
