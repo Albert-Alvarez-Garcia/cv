@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albert Alvarez Garcia - Junior C/C++ & Backend Developer</title>
+    <title>Albert Alvarez Garcia - C/C++ & Backend Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #1f2937; }
         .accent-border { border-left: 4px solid #f97316; }
         .sidebar { background-color: #f8fafc; }
         .profile-container {
-            width: 11rem; height: 11rem; border-radius: 9999px;
+            width: 10rem; height: 10rem; border-radius: 9999px;
             border: 4px solid #f97316; overflow: hidden; background-color: #e2e8f0;
         }
         .profile-img { width: 100%; height: 100%; object-fit: cover; }
@@ -29,18 +29,16 @@
 
     <!-- CONTROLES SUPERIORES: IMPRIMIR Y SELECTOR DE IDIOMA -->
     <div class="max-w-5xl mx-auto mb-4 flex justify-between items-center px-4 no-print flex-wrap gap-3">
-        <!-- Selector de idioma -->
         <div class="flex items-center gap-1 bg-white p-1 rounded-lg shadow-sm border border-gray-200">
-            <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1.5 text-xs rounded-md text-slate-600 hover:bg-slate-100 transition-all font-medium">EN</button>
             <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1.5 text-xs rounded-md text-slate-600 hover:bg-slate-100 transition-all font-medium">ES</button>
+            <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1.5 text-xs rounded-md text-slate-600 hover:bg-slate-100 transition-all font-medium">EN</button>
             <button id="btn-ca" onclick="setLanguage('ca')" class="px-3 py-1.5 text-xs rounded-md text-slate-600 hover:bg-slate-100 transition-all font-medium">CA</button>
         </div>
 
-        <!-- Botón Imprimir -->
         <button onclick="window.print()" class="flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-500 transition-all shadow-md">
             <i class="fa-solid fa-print"></i> 
-            <span class="lang-en">Print / Save as PDF</span>
             <span class="lang-es">Imprimir / Guardar PDF</span>
+            <span class="lang-en">Print / Save as PDF</span>
             <span class="lang-ca">Imprimir / Desar PDF</span>
         </button>
     </div>
@@ -48,287 +46,296 @@
     <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
         
         <!-- SIDEBAR -->
-        <aside class="w-full md:w-1/3 sidebar p-8 border-b md:border-b-0 md:border-r border-gray-200">
-            <div class="flex flex-col items-center mb-8">
-                <div class="profile-container mb-4">
+        <aside class="w-full md:w-1/3 sidebar p-6 border-b md:border-b-0 md:border-r border-gray-200">
+            <div class="flex flex-col items-center mb-6">
+                <div class="profile-container mb-3">
                     <img src="albertcv.jpg" alt="Albert Alvarez Garcia" class="profile-img" onerror="this.src='https://via.placeholder.com/400?text=Albert+Alvarez'">
                 </div>
-                <h1 class="text-2xl font-bold text-slate-800 text-center uppercase tracking-wider leading-tight">Albert<br>Alvarez Garcia</h1>
-                <p class="text-orange-600 font-semibold mt-2 text-center uppercase text-xs tracking-widest">
-                    <span class="lang-en">Junior C/C++ & Backend Developer</span>
-                    <span class="lang-es">Desarrollador Junior C/C++ y Backend</span>
-                    <span class="lang-ca">Desenvolupador Junior C/C++ i Backend</span>
+                <h1 class="text-xl font-bold text-slate-800 text-center uppercase tracking-wider leading-tight">Albert<br>Alvarez Garcia</h1>
+                <p class="text-orange-600 font-semibold mt-2 text-center uppercase text-[11px] tracking-widest">
+                    <span class="lang-es">Desarrollador C/C++ & Híbrido</span>
+                    <span class="lang-en">C/C++ & Hybrid Developer</span>
+                    <span class="lang-ca">Desenvolupador C/C++ & Híbrid</span>
                 </p>
             </div>
 
-            <div class="space-y-6">
+            <div class="space-y-5">
                 <!-- CONTACTO -->
                 <section>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 border-b pb-1">
-                        <span class="lang-en">Contact</span>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2.5 border-b pb-1">
                         <span class="lang-es">Contacto</span>
+                        <span class="lang-en">Contact</span>
                         <span class="lang-ca">Contacte</span>
                     </h3>
-                    <ul class="space-y-3 text-sm">
+                    <ul class="space-y-2 text-xs">
                         <li class="flex items-center group">
-                            <i class="fa-brands fa-github w-8 text-slate-400 text-xl group-hover:text-orange-600"></i>
+                            <i class="fa-brands fa-github w-6 text-slate-400 text-base group-hover:text-orange-600"></i>
                             <a href="https://github.com/Albert-Alvarez-Garcia" target="_blank" class="text-slate-600 hover:text-orange-600 truncate font-medium">Albert-Alvarez-Garcia</a>
                         </li>
                         <li class="flex items-center">
-                            <i class="fa-solid fa-envelope w-8 text-slate-400 text-lg"></i>
-                            <a href="mailto:albert.alvarez.garcia@gmail.com" class="text-slate-600 hover:text-orange-600 truncate font-medium text-xs">albert.alvarez.garcia@gmail.com</a>
+                            <i class="fa-solid fa-envelope w-6 text-slate-400 text-sm"></i>
+                            <a href="mailto:albert.alvarez.garcia@gmail.com" class="text-slate-600 hover:text-orange-600 truncate font-medium text-[11px]">albert.alvarez.garcia@gmail.com</a>
                         </li>
                         <li class="flex items-center">
-                            <i class="fa-solid fa-phone w-8 text-slate-400 text-lg"></i>
-                            <span class="text-slate-600 font-medium text-xs">679560455</span>
+                            <i class="fa-solid fa-phone w-6 text-slate-400 text-sm"></i>
+                            <span class="text-slate-600 font-medium">679560455</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fa-solid fa-location-dot w-8 text-slate-400 text-lg"></i>
-                            <span class="text-slate-600 font-medium">Barcelona, Spain</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-language w-8 text-slate-400 text-lg"></i>
-                            <span class="text-slate-600 font-medium text-xs">
-                                <span class="lang-en">English (Professional) / Spanish & Catalan (Native)</span>
-                                <span class="lang-es">Inglés (Profesional) / Español y Catalán (Nativo)</span>
-                                <span class="lang-ca">Anglès (Professional) / Espanyol i Català (Natiu)</span>
-                            </span>
+                            <i class="fa-solid fa-location-dot w-6 text-slate-400 text-sm"></i>
+                            <span class="text-slate-600 font-medium">L'Hospitalet de Llobregat, Barcelona</span>
                         </li>
                     </ul>
                 </section>
 
-                <!-- CORE TECH STACK -->
+                <!-- HABILIDADES TÉCNICAS -->
                 <section>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 border-b pb-1">
-                        <span class="lang-en">Core Tech Stack</span>
-                        <span class="lang-es">Tecnologías Clave</span>
-                        <span class="lang-ca">Tecnologies Clau</span>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2.5 border-b pb-1">
+                        <span class="lang-es">Habilidades Técnicas</span>
+                        <span class="lang-en">Technical Skills</span>
+                        <span class="lang-ca">Habilitats Tècniques</span>
                     </h3>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="px-2 py-1 bg-slate-800 text-orange-400 text-[10px] font-bold rounded">C / C++</span>
-                        <span class="px-2 py-1 bg-slate-800 text-orange-400 text-[10px] font-bold rounded">JAVA</span>
-                        <span class="px-2 py-1 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">PYTHON</span>
-                        <span class="px-2 py-1 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">SQL / GIT</span>
-                        <span class="px-2 py-1 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">LINUX / BASH</span>
-                        <span class="px-2 py-1 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">REST APIs</span>
+                    <div class="space-y-2.5 text-xs">
+                        <div>
+                            <span class="font-semibold text-slate-700 block mb-1">Core & Dev:</span>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="px-1.5 py-0.5 bg-slate-800 text-orange-400 text-[10px] font-bold rounded">C</span>
+                                <span class="px-1.5 py-0.5 bg-slate-800 text-orange-400 text-[10px] font-bold rounded">C++</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Python</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">JavaScript</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Node.js</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Next.js</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Java</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">PHP</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Pascal/Delphi</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-slate-700 block mb-1">Systems & DevOps:</span>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Linux Admin</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Bash</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Docker</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Zabbix</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">AWS/Azure</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-slate-700 block mb-1">Databases & Tools:</span>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">PostgreSQL</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">MySQL</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Git</span>
+                                <span class="px-1.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded">Jira / Zendesk</span>
+                            </div>
+                        </div>
                     </div>
-                </section>
-
-                <!-- COMPETENCIAS -->
-                <section>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 border-b pb-1">
-                        <span class="lang-en">Dev Competencies</span>
-                        <span class="lang-es">Competencias Dev</span>
-                        <span class="lang-ca">Competències Dev</span>
-                    </h3>
-                    <ul class="text-xs space-y-2 text-slate-600">
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-orange-500"></i> 
-                            <span class="lang-en">Object-Oriented Programming (OOP)</span>
-                            <span class="lang-es">Programación Orientada a Objetos (POO)</span>
-                            <span class="lang-ca">Programació Orientada a Objectes (POO)</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-orange-500"></i> 
-                            <span class="lang-en">Low-level Memory & Logic Management</span>
-                            <span class="lang-es">Gestión de Memoria y Lógica de Bajo Nivel</span>
-                            <span class="lang-ca">Gestió de Memòria i Lògica de Baix Nivell</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-orange-500"></i> 
-                            <span class="lang-en">Backend & Scripting Automation</span>
-                            <span class="lang-es">Backend y Scripting de Automatización</span>
-                            <span class="lang-ca">Backend i Scripting d'Automatització</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-orange-500"></i> 
-                            <span class="lang-en">Version Control & Collaborative Git</span>
-                            <span class="lang-es">Control de Versiones y Git Colaborativo</span>
-                            <span class="lang-ca">Control de Versions i Git Col·laboratiu</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-orange-500"></i> 
-                            <span class="lang-en">Algorithmic Problem Solving</span>
-                            <span class="lang-es">Resolución Algorítmica de Problemas</span>
-                            <span class="lang-ca">Resolució Algoríズム de Problemes</span>
-                        </li>
-                    </ul>
                 </section>
             </div>
         </aside>
 
         <!-- MAIN CONTENT -->
-        <main class="w-full md:w-2/3 p-8 md:p-12">
+        <main class="w-full md:w-2/3 p-6 md:p-10">
             
-            <!-- RESUMEN PERFIL -->
-            <section class="mb-10">
-                <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center">
-                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm font-bold">01</span>
-                    <span class="lang-en">Professional Summary</span>
+            <!-- PERFIL PROFESIONAL -->
+            <section class="mb-8">
+                <h2 class="text-lg font-bold text-slate-800 uppercase tracking-widest mb-3 flex items-center">
+                    <span class="w-7 h-7 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-2.5 text-xs font-bold">01</span>
                     <span class="lang-es">Perfil Profesional</span>
+                    <span class="lang-en">Professional Profile</span>
                     <span class="lang-ca">Perfil Professional</span>
                 </h2>
-                <div class="accent-border pl-6 text-slate-600 leading-relaxed text-sm">
-                    <p class="lang-en">
-                        Dedicated <strong>Junior Software Developer</strong> (42 Barcelona alumni) with a strong mathematical background and extensive hands-on experience in <strong>C, C++, Java, and Python</strong>. Solid foundation in backend logic, low-level data structures, and algorithmic problem-solving. Bringing professional maturity, structured methodology, and high adaptability to technical engineering teams.
-                    </p>
+                <div class="accent-border pl-4 text-slate-600 leading-relaxed text-xs">
                     <p class="lang-es">
-                        <strong>Desarrollador de Software Junior</strong> motivado (alumni de 42 Barcelona) con sólida base matemática y amplia práctica en <strong>C, C++, Java y Python</strong>. Sólidos cimientos en lógica backend, estructuras de datos de bajo nivel y resolución algorítmica. Aporta madurez profesional, rigor metodológico y alta adaptabilidad a equipos técnicos.
+                        Profesional con sólida base estadística y más de 15 años de experiencia transversal en gestión de proyectos, liderazgo de equipos y consultoría IT. Transición sólida hacia el desarrollo de software moderno (C, C++, Python, Linux, Docker), combinando una visión integral del negocio (gestión de Pymes y operaciones) con rigor técnico, capacidad de automatización y resolución de normativas complejas.
                     </p>
-                    <p class="lang-ca">
-                        <strong>Desenvolupador de Programari Junior</strong> motivat (alumni de 42 Barcelona) amb sòlida base matemàtica i àmplia pràctica en <strong>C, C++, Java i Python</strong>. Fonaments sòlids en lògica backend, estructures de dades de baix nivell i resolució algorítmica. Aporta maduresa professional, rigor metodològic i alta adaptabilitat a equips tècnics.
+                    <p class="lang-en lang-hidden">
+                        Professional with a strong statistical foundation and over 15 years of cross-functional experience in project management, team leadership, and IT consulting. Solid transition toward modern software development (C, C++, Python, Linux, Docker), combining comprehensive business vision (SME management and operations) with technical rigor, automation capabilities, and complex regulatory problem-solving.
+                    </p>
+                    <p class="lang-ca lang-hidden">
+                        Professional amb sòlida base estadística i més de 15 anys d'experiència transversal en gestió de projectes, lideratge d'equips i consultoria IT. Transició sòlida cap al desenvolupament de programari modern (C, C++, Python, Linux, Docker), combinant una visió integral del negoci (gestió de Pimes i operacions) amb rigor tècnic, capacitat d'automatització i resolució de normatives complexes.
                     </p>
                 </div>
             </section>
 
             <!-- EXPERIENCIA PROFESIONAL -->
-            <section class="mb-10">
-                <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest mb-6 flex items-center">
-                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm font-bold">02</span>
-                    <span class="lang-en">Professional Experience</span>
+            <section class="mb-8">
+                <h2 class="text-lg font-bold text-slate-800 uppercase tracking-widest mb-5 flex items-center">
+                    <span class="w-7 h-7 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-2.5 text-xs font-bold">02</span>
                     <span class="lang-es">Experiencia Profesional</span>
+                    <span class="lang-en">Professional Experience</span>
                     <span class="lang-ca">Experiència Professional</span>
                 </h2>
 
-                <div class="space-y-8">
-                    <!-- VISUAL MS (2021 - 2025) -->
-                    <div class="relative pl-6 border-l border-slate-200">
-                        <div class="absolute w-3 h-3 bg-orange-500 rounded-full -left-[6.5px] top-1.5"></div>
+                <div class="space-y-6">
+                    <!-- CONSULTOR IT -->
+                    <div class="relative pl-5 border-l border-slate-200">
+                        <div class="absolute w-2.5 h-2.5 bg-orange-500 rounded-full -left-[5.5px] top-1.5"></div>
                         <div class="flex justify-between items-start flex-wrap mb-1">
                             <div>
-                                <h3 class="text-base font-bold text-slate-800">
-                                    <span class="lang-en">IT Engineer & Backend Operations</span>
-                                    <span class="lang-es">Ingeniero IT y Operaciones Backend</span>
-                                    <span class="lang-ca">Enginyer IT i Operacions Backend</span>
+                                <h3 class="text-sm font-bold text-slate-800">
+                                    <span class="lang-es">Consultor IT, Desarrollador & Scrum Master</span>
+                                    <span class="lang-en">IT Consultant, Developer & Scrum Master</span>
+                                    <span class="lang-ca">Consultor IT, Desenvolupador & Scrum Master</span>
                                 </h3>
-                                <p class="text-[11px] font-semibold text-slate-400">2021 – 2025</p>
+                                <p class="text-[10px] font-semibold text-slate-400">
+                                    <span class="lang-es">Últimos 5 años</span>
+                                    <span class="lang-en">Last 5 years</span>
+                                    <span class="lang-ca">Últims 5 anys</span>
+                                </p>
                             </div>
-                            <span class="text-[10px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded mt-1 sm:mt-0">VISUAL MS</span>
                         </div>
-                        <p class="text-xs font-semibold text-orange-600 mb-2 mt-1">
-                            <span class="lang-en">System Automation, Scripting & Process Management</span>
-                            <span class="lang-es">Automatización de Sistemas, Scripting y Gestión de Procesos</span>
-                            <span class="lang-ca">Automatització de Sistemes, Scripting i Gestió de Processos</span>
-                        </p>
-                        
-                        <!-- Puntos EN -->
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 lang-en">
-                            <li>Developed custom automation scripts and server templates using <strong>Python</strong> and <strong>Bash</strong> to optimize deployment pipelines.</li>
-                            <li>Engineered robust infrastructure management solutions, handling backend service integrations and database tracking via <strong>Zabbix</strong> and <strong>Azure</strong>.</li>
-                            <li>Applied strict logic and problem-solving methodologies to resolve complex multi-platform incidents under strict security guidelines.</li>
-                            <li>Coordinated technical tasks and managed internal team workflows using Agile methodologies as a Scrum Master.</li>
-                        </ul>
-
-                        <!-- Puntos ES -->
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 lang-es">
-                            <li>Desarrollo de scripts propios de automatización y plantillas de servidor en <strong>Python</strong> y <strong>Bash</strong> para optimizar los flujos de despliegue.</li>
-                            <li>Diseño de soluciones de infraestructura, gestionando integraciones de servicios backend y monitorización de bases de datos mediante <strong>Zabbix</strong> y <strong>Azure</strong>.</li>
-                            <li>Aplicación de rigor lógico y metodologías de resolución de problemas en la gestión de incidencias multiplataforma bajo estrictas normas de seguridad.</li>
-                            <li>Coordinación de tareas técnicas y gestión de flujos de trabajo internos mediante metodologías Ágiles como Scrum Master.</li>
-                        </ul>
-
-                        <!-- Puntos CA -->
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 lang-ca">
-                            <li>Desenvolupament de scripts propis d'automatització i plantilles de servidor en <strong>Python</strong> i <strong>Bash</strong> per optimitzar els fluxos de desplegament.</li>
-                            <li>Disseny de solucions d'infraestructura, gestionant integracions de serveis backend i monitoratge de bases de dades mitjançant <strong>Zabbix</strong> i <strong>Azure</strong>.</li>
-                            <li>Aplicació de rigor lògic i metodologies de resolució de problemes en la gestió d'incidències multiplataforma sota estrictes normes de seguretat.</li>
-                            <li>Coordinació de tasques tècniques i gestió de fluxos de treball interns mitjançant metodologies Àgils com a Scrum Master.</li>
+                        <ul class="space-y-1 text-slate-600 text-[11px] list-disc pl-4 mt-2">
+                            <li>
+                                <span class="lang-es">Ejercicio como Scrum Master y consultor tecnológico, liderando flujos ágiles con Jira y optimizando la atención mediante Zendesk e integración de IA.</span>
+                                <span class="lang-en lang-hidden">Served as Scrum Master and tech consultant, leading agile workflows with Jira and optimizing support via Zendesk and AI integration.</span>
+                                <span class="lang-ca lang-hidden">Exercici com a Scrum Master i consultor tecnològic, liderant fluxos àgils amb Jira i optimitzant l'atenció mitjançant Zendesk i integració d'IA.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Desarrollo de scripts y automatizaciones a medida (gestión de divisas sin APIs externas) y mantenimiento evolutivo de módulos de software.</span>
+                                <span class="lang-en lang-hidden">Developed custom scripts and automations (currency management without external APIs) and evolutionary maintenance of software modules.</span>
+                                <span class="lang-ca lang-hidden">Desenvolupament de scripts i automatitzacions a mida (gestió de divises sense APIs externes) i manteniment evolutiu de mòduls de programari.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Gestión integral de incidencias (N1-N3) y adaptación técnica frente a normativas fiscales de la AEAT (Verifactu) en colaboración con el COACAB.</span>
+                                <span class="lang-en lang-hidden">Comprehensive incident management (L1-L3) and technical adaptation to AEAT tax regulations (Verifactu) in collaboration with COACAB.</span>
+                                <span class="lang-ca lang-hidden">Gestió integral d'incidències (N1-N3) i adaptació tècnica enfront de normatives fiscals de l'AEAT (Verifactu) en col·laboració amb el COACAB.</span>
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- FOUNDER / FREELANCE (2007 - 2018) -->
-                    <div class="relative pl-6 border-l border-slate-200">
-                        <div class="absolute w-3 h-3 bg-slate-300 rounded-full -left-[6.5px] top-1.5"></div>
+                    <!-- AUTÓNOMO -->
+                    <div class="relative pl-5 border-l border-slate-200">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-300 rounded-full -left-[5.5px] top-1.5"></div>
                         <div class="flex justify-between items-start flex-wrap mb-1">
                             <div>
-                                <h3 class="text-base font-bold text-slate-800">
-                                    <span class="lang-en">Software Solutions Lead & Developer</span>
-                                    <span class="lang-es">Responsable de Soluciones de Software y Desarrollador</span>
-                                    <span class="lang-ca">Responsable de Solucions de Programari i Desenvolupador</span>
+                                <h3 class="text-sm font-bold text-slate-800">
+                                    <span class="lang-es">Propietario, Gerente & Desarrollador (Autónomo)</span>
+                                    <span class="lang-en">Owner, Manager & Developer (Self-Employed)</span>
+                                    <span class="lang-ca">Propietari, Gerent & Desenvolupador (Autònom)</span>
                                 </h3>
-                                <p class="text-[11px] font-semibold text-slate-400">2007 – 2018</p>
+                                <p class="text-[10px] font-semibold text-slate-400">2008 – 2017</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-500 border border-slate-300 px-2 py-0.5 rounded mt-1 sm:mt-0">SELF-EMPLOYED</span>
                         </div>
-                        <p class="text-xs font-semibold text-slate-500 mb-2 mt-1">
-                            <span class="lang-en">Custom Full-Stack Solutions & API Integration</span>
-                            <span class="lang-es">Soluciones Full-Stack a Medida e Integración de APIs</span>
-                            <span class="lang-ca">Solucions Full-Stack a Mida i Integració d'APIs</span>
-                        </p>
-                        
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 lang-en">
-                            <li>Designed and implemented custom software solutions synchronized with local peripheral hardware and secure tax authority APIs.</li>
-                            <li>Managed full database structures, backend integrations, and SaaS environments (Google Workspace / MS 365).</li>
-                        </ul>
-
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 lang-es">
-                            <li>Diseño e implantación de software a medida sincronizado con hardware periférico local y APIs fiscales seguras.</li>
-                            <li>Gestión completa de estructuras de bases de datos, integraciones backend y entornos SaaS (Google Workspace / MS 365).</li>
-                        </ul>
-
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 lang-ca">
-                            <li>Disseny i implantació de programari a mida sincronitzat amb maquinari perifèric local i APIs fiscals segures.</li>
-                            <li>Gestió completa d'estructures de bases de dades, integracions backend i entorns SaaS (Google Workspace / MS 365).</li>
+                        <ul class="space-y-1 text-slate-600 text-[11px] list-disc pl-4 mt-2">
+                            <li>
+                                <span class="lang-es">Dirección global de negocio propio, control financiero, contabilidad y gestión de proveedores. Liderazgo y contratación de un equipo de 3 empleados.</span>
+                                <span class="lang-en lang-hidden">Global management of own business, financial control, accounting, and supplier management. Leadership and hiring of a 3-employee team.</span>
+                                <span class="lang-ca lang-hidden">Direcció global de negoci propi, control financer, comptabilitat i gestió de proveïdors. Lideratge i contractació d'un equip de 3 empleats.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Diseño y programación de software a medida para la automatización de procesos internos y control de stock del establecimiento.</span>
+                                <span class="lang-en lang-hidden">Design and programming of custom software for internal process automation and establishment stock control.</span>
+                                <span class="lang-ca lang-hidden">Disseny i programació de programari a mida per a l'automatització de processos interns i control d'estoc de l'establiment.</span>
+                            </li>
                         </ul>
                     </div>
 
-                    <!-- SERUNION (2004 - 2006) -->
-                    <div class="relative pl-6 border-l border-slate-200">
-                        <div class="absolute w-3 h-3 bg-slate-300 rounded-full -left-[6.5px] top-1.5"></div>
+<!-- SERUNION -->
+                    <div class="relative pl-5 border-l border-slate-200">
+                        <div class="absolute w-2.5 h-2.5 bg-slate-300 rounded-full -left-[5.5px] top-1.5"></div>
                         <div class="flex justify-between items-start flex-wrap mb-1">
                             <div>
-                                <h3 class="text-base font-bold text-slate-800">
-                                    <span class="lang-en">Process Automation Analyst</span>
-                                    <span class="lang-es">Analista de Automatización de Procesos</span>
-                                    <span class="lang-ca">Analista d'Automatització de Processos</span>
+                                <h3 class="text-sm font-bold text-slate-800">
+                                    <span class="lang-es">Jefe de Compras y Operaciones (Serunion)</span>
+                                    <span class="lang-en">Purchasing & Operations Head (Serunion)</span>
+                                    <span class="lang-ca">Cap de Compres i Operacions (Serunion)</span>
                                 </h3>
-                                <p class="text-[11px] font-semibold text-slate-400">2004 – 2006</p>
+                                <p class="text-[10px] font-semibold text-slate-400">2003 – 2006</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-500 border border-slate-300 px-2 py-0.5 rounded mt-1 sm:mt-0">SERUNION</span>
                         </div>
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 mt-2 lang-en">
-                            <li>Automated internal department reporting workflows, drafted comprehensive technical documentation, and delivered team training sessions.</li>
+                        <ul class="space-y-1 text-slate-600 text-[11px] list-disc pl-4 mt-2">
+                            <li>
+                                <span class="lang-es">Promoción orgánica desde la gestión base hasta la dirección de departamento, liderando a un equipo de 5 personas.</span>
+                                <span class="lang-en lang-hidden">Organic promotion from base management to department head, leading a team of 5 people.</span>
+                                <span class="lang-ca lang-hidden">Promoció orgànica des de la gestió base fins a la direcció de departament, liderant un equip de 5 persones.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Automatización temprana de procesos internos mediante herramientas rudimentarias y avanzadas (hojas de cálculo complejas y desarrollo de macros), reduciendo tiempos operativos.</span>
+                                <span class="lang-en lang-hidden">Early automation of internal processes using custom spreadsheets and macro development, significantly reducing operational times.</span>
+                                <span class="lang-ca lang-hidden">Automatització primerenca de processos interns mitjançant fulls de càlcul complexos i desenvolupament de macros, reduint temps operatius.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Transformación del rol operativo en un departamento analítico avanzado mediante ponderación de datos y modelos estadísticos (campana de Gauss).</span>
+                                <span class="lang-en lang-hidden">Transformation of the operational role into an advanced analytical department using data weighting and statistical models (Gauss bell).</span>
+                                <span class="lang-ca lang-hidden">Transformació del rol operatiu en un departament analític avançat mitjançant ponderació de dades i models estadístics (campana de Gauss).</span>
+                            </li>
                         </ul>
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 mt-2 lang-es">
-                            <li>Automatización de flujos de informes internos del departamento, redacción de documentación técnica y formación interna de equipos.</li>
-                        </ul>
-                        <ul class="space-y-1.5 text-slate-600 text-xs list-disc pl-4 mt-2 lang-ca">
-                            <li>Automatització de fluxos d'informes interns del departament, redacció de documentació tècnica i formació interna d'equips.</li>
-                        </ul>
+                    </div>
+            </section>
+
+            <!-- PROYECTOS DESTACADOS -->
+            <section class="mb-8">
+                <h2 class="text-lg font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center">
+                    <span class="w-7 h-7 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-2.5 text-xs font-bold">03</span>
+                    <span class="lang-es">Proyectos Destacados</span>
+                    <span class="lang-en">Featured Projects</span>
+                    <span class="lang-ca">Projectes Destacats</span>
+                </h2>
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-1">CortaMástil (Optimizador 2D & Nesting)</h4>
+                        <p class="text-slate-600 text-[11px]">
+                            <span class="lang-es">SPA en Vanilla JS y Tailwind CSS. Algoritmo greedy bin packing en $O(n \log n)$ para optimización de cortes, cálculo de mermas y simulación de control de carga en vehículos.</span>
+                            <span class="lang-en lang-hidden">SPA in Vanilla JS and Tailwind CSS. Greedy bin packing algorithm in $O(n \log n)$ for cut optimization, waste calculation, and vehicle load simulation.</span>
+                            <span class="lang-ca lang-hidden">SPA en Vanilla JS i Tailwind CSS. Algorisme greedy bin packing en $O(n \log n)$ per a optimització de talls, càlcul de minves i simulació de control de càrrega en vehicles.</span>
+                        </p>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-1">Core Systems & Gráficos en C (42 Barcelona)</h4>
+                        <p class="text-slate-600 text-[11px]">
+                            <span class="lang-es"><strong>cub3D:</strong> Motor gráfico Raycasting estilo Wolfenstein 3D con MiniLibX. <strong>MiniHell:</strong> Emulador de terminal Unix desde cero (pipes, redirecciones, señales). <strong>ft_irc:</strong> Servidor de chat concurrente por sockets.</span>
+                            <span class="lang-en lang-hidden"><strong>cub3D:</strong> Wolfenstein 3D-style Raycasting graphics engine with MiniLibX. <strong>MiniHell:</strong> Unix terminal emulator from scratch (pipes, redirections, signals). <strong>ft_irc:</strong> Concurrent socket chat server.</span>
+                            <span class="lang-ca lang-hidden"><strong>cub3D:</strong> Motor gràfic Raycasting estil Wolfenstein 3D amb MiniLibX. <strong>MiniHell:</strong> Emulador de terminal Unix des de zero (pipes, redireccions, senyals). <strong>ft_irc:</strong> Servidor de xat concurrent per sòockets.</span>
+                        </p>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-1">Desarrollo Web & AI</h4>
+                        <p class="text-slate-600 text-[11px]">
+                            <span class="lang-es"><strong>Transcendence:</strong> App web avanzada a gran escala. <strong>Microform-AI & Control-Deck:</strong> Generador de interfaces dinámicas con esquemas JSON, integración Google Gemini API y panel de control minimalista para Linux.</span>
+                            <span class="lang-en lang-hidden"><strong>Transcendence:</strong> Large-scale advanced web app. <strong>Microform-AI & Control-Deck:</strong> Dynamic interface generator with JSON schemas, Google Gemini API integration, and minimal control panel for Linux.</span>
+                            <span class="lang-ca lang-hidden"><strong>Transcendence:</strong> App web avançada a gran escala. <strong>Microform-AI & Control-Deck:</strong> Generador d'interfícies dinàmiques amb esquemes JSON, integració Google Gemini API i panell de control minimalista per a Linux.</span>
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <!-- EDUCACIÓN Y FORMACIÓN RECIENTE (2024 - 2026) -->
+            <!-- EDUCACIÓN Y FORMACIÓN -->
             <section>
-                <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center">
-                    <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 text-sm font-bold">03</span>
-                    <span class="lang-en">Education & Training</span>
+                <h2 class="text-lg font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center">
+                    <span class="w-7 h-7 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-2.5 text-xs font-bold">04</span>
                     <span class="lang-es">Educación y Formación</span>
+                    <span class="lang-en">Education & Training</span>
                     <span class="lang-ca">Educació i Formació</span>
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                     <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
-                        <div class="flex justify-between items-center mb-1">
-                            <h4 class="font-bold text-slate-800">42 Barcelona</h4>
-                            <span class="text-[10px] font-semibold text-slate-400">2024 – 2026</span>
-                        </div>
+                        <h4 class="font-bold text-slate-800">42 Barcelona</h4>
                         <p class="text-orange-600 font-semibold text-[11px]">
-                            <span class="lang-en">Software Engineering (Common Core - C/C++, Algorithms)</span>
-                            <span class="lang-es">Ingeniería de Software (Common Core - C/C++, Algoritmos)</span>
-                            <span class="lang-ca">Enginyeria de Programari (Common Core - C/C++, Algorismes)</span>
+                            <span class="lang-es">Common Core (Ingeniería de Software - C/C++, Algoritmos)</span>
+                            <span class="lang-en lang-hidden">Common Core (Software Engineering - C/C++, Algorithms)</span>
+                            <span class="lang-ca lang-hidden">Common Core (Enginyeria de Programari - C/C++, Algorismes)</span>
                         </p>
                     </div>
                     <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                        <h4 class="font-bold text-slate-800">CIFO La Violeta</h4>
+                        <p class="text-orange-600 font-semibold text-[11px]">
+                            <span class="lang-es">Formación en Programación Java (120 horas)</span>
+                            <span class="lang-en lang-hidden">Java Programming Training (120 hours)</span>
+                            <span class="lang-ca lang-hidden">Formació en Programació Java (120 hores)</span>
+                        </p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 md:col-span-2">
                         <h4 class="font-bold text-slate-800">
-                            <span class="lang-en">Degree in Statistics & Mathematics</span>
-                            <span class="lang-es">Grado en Estadística y Matemáticas</span>
-                            <span class="lang-ca">Grau en Estadística i Matemàtiques</span>
+                            <span class="lang-es">Estadística y Modelos Cuantitativos (AERCE)</span>
+                            <span class="lang-en lang-hidden">Statistics and Quantitative Models (AERCE)</span>
+                            <span class="lang-ca lang-hidden">Estadística i Models Quantitatius (AERCE)</span>
                         </h4>
                         <p class="text-slate-500 mt-0.5 text-[11px]">
-                            <span class="lang-en">B.Sc. Equivalent (Statistics Degree + 3 Yrs Math)</span>
-                            <span class="lang-es">Titulación universitaria en Estadística + 3 años de Matemáticas</span>
-                            <span class="lang-ca">Titulació universitària en Estadística + 3 anys de Matemàtiques</span>
+                            <span class="lang-es">Base estadística, analítica avanzada y dirección de compras (AERCE).</span>
+                            <span class="lang-en lang-hidden">Statistical foundation, advanced analytics, and purchasing management (AERCE).</span>
+                            <span class="lang-ca lang-hidden">Base estadística, analítica avançada i direcció de compres (AERCE).</span>
                         </p>
                     </div>
                 </div>
@@ -336,17 +343,16 @@
         </main>
     </div>
 
-    <!-- SCRIPT DE CAMBIO DE IDIOMA -->
+    <!-- SCRIPT DE IDIOMA -->
     <script>
         function setLanguage(lang) {
-            const allLangElements = document.querySelectorAll('.lang-en, .lang-es, .lang-ca');
+            const allLangElements = document.querySelectorAll('.lang-es, .lang-en, .lang-ca');
             allLangElements.forEach(el => el.classList.add('lang-hidden'));
 
             const selectedElements = document.querySelectorAll('.lang-' + lang);
             selectedElements.forEach(el => el.classList.remove('lang-hidden'));
 
-            const buttons = ['en', 'es', 'ca'];
-            buttons.forEach(b => {
+            ['es', 'en', 'ca'].forEach(b => {
                 const btn = document.getElementById('btn-' + b);
                 if (b === lang) {
                     btn.classList.add('lang-btn-active');
@@ -359,7 +365,7 @@
         }
 
         window.onload = function() {
-            setLanguage('en');
+            setLanguage('es');
         };
     </script>
 </body>
